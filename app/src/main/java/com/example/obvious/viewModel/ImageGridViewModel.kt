@@ -23,6 +23,10 @@ class ImageGridViewModel : ViewModel() {
         postValue(null)
     }
 
+    val position = MutableLiveData<Int>().apply {
+        postValue(null)
+    }
+
     fun fetchObjectFromJson(assets: AssetManager) {
         viewModelScope.launch(Dispatchers.IO) {
             val input: InputStream
